@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  background-color: #1f2632;
+}
+
+.books-text {
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  animation: load 350ms;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  color: #52ffa8;
+}
+
+.card-container {
+  padding: 10px 0px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 220px;
+  height: 300px;
+  background-color: #323a49;
+  box-shadow: 5px 5px #404550;
+  border-radius: 20px;
+  animation: load 800ms;
+  transition: 0.3s;
+}
+
+.card-container:hover {
+  transform: scale(102%);
+  box-shadow: 9px 9px #404550;
+}
+
+.card-container h2 {
+  color: #52ffa8;
+  text-shadow: 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+.card-container h4 {
+  color: #cee3e9;
+  text-shadow: 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+header input {
+  text-align: center;
+  border-radius: 20px;
+  height: 35px;
+}
+
+.all-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 5%;
+}
+
+#search-btn {
+  border-radius: 20px;
+  cursor: pointer;
+  padding: 10px;
+  min-width: 90px;
+  border: 0px;
+  transition: background-color 100ms linear;
+  background: #52ffa8;
+}
+
+#search-btn:hover {
+  background: #0ba156;
+  color: #ffffff;
+}
+
+.no-match {
+  color: red;
+}
+
+@media only screen and (max-width: 400px) {
+  header input {
+    border-radius: 20px;
+    width: 50%;
+  }
+  header {
+    padding: 0;
+    justify-content: space-between;
+    gap: 70px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  header input {
+    border-radius: 20px;
+    width: 40%;
+  }
+  header {
+    padding: 0;
+    justify-content: space-between;
+    gap: 70px;
+  }
+}
+
+@keyframes load {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
